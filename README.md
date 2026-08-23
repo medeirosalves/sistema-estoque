@@ -6,7 +6,7 @@ Sistema de gestão de estoque desenvolvido em Python para estudo e portfólio.
 
 - Python
 - Programação Orientada a Objetos (POO)
-- JSON
+- SQLite3
 - Git e GitHub
 
 ## 📌 Status
