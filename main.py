@@ -1,5 +1,9 @@
 from models.produto import Produto
-from services.estoque import Estoque
+from services.estoque_service import Estoque
+
+from database.connection import engine
+
+print(engine)
 
 print("=" * 50)
 print(" " * 15, "Sistema de Estoque")
