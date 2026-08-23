@@ -1,8 +1,10 @@
 from models.produto import Produto
 from services.estoque import Estoque
 
+print("=" * 50)
+print(" " * 15, "Sistema de Estoque")
+print("=" * 50)
 menu = """
-Sistema de Estoque
 1. Adicionar Produto
 2. Listar Produtos
 3. Buscar Produto
@@ -15,7 +17,7 @@ estoque = Estoque()
 
 while True:
     print(menu)
-    opcao = input("Escolha uma opção: ")
+    opcao = input("Escolha uma opção:")
 
     if opcao == "1":
         nome = input("Nome do produto: ")
