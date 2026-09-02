@@ -59,9 +59,12 @@ while True:
     elif opcao == "4":
         sku = input("Digite o SKU do produto que deseja remover: ")
 
-        estoque.remover_produto(sku)
+        removido = estoque.remover_produto(sku)
 
-        print("Produto removido com sucesso!")
+        if removido:
+            print("Produto removido com sucesso!")
+        else:
+            print("Produto não encontrado.")
 
     elif opcao == "5":
         sku = input("Digite o SKU do produto que deseja atualizar: ")

@@ -14,6 +14,12 @@ class Produto(Base):
     preco: Mapped[float] = mapped_column()
     quantidade: Mapped[int] = mapped_column()
 
+    def __init__(self, nome, sku, preco, quantidade):
+        self.nome = nome
+        self.sku = sku
+        self.preco = preco
+        self.quantidade = quantidade
+
     def __str__(self):
         return (
             f"Produto: {self.nome}, "
