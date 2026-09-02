@@ -47,3 +47,24 @@ def remover_produto(sku):
 
     finally:
         session.close()
+
+def atualizar_produto(sku, nome, preco, quantidade):
+    session = SessionLocal()
+
+    try:
+        produto = session.query(Produto).filter_by(sku=sku).first()
+
+        if produto:
+            produto.nome = nome
+            produto.preco = preco
+            produto.quantidade = quantidade
+
+            session.commit()
+            session.refresh(produto)
+
+            return produto
+
+        return None
+
+    finally:
+        session.close()

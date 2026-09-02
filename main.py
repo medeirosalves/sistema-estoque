@@ -84,11 +84,17 @@ while True:
                 f"Nova quantidade (atual: {produto.quantidade}): "
             ) or produto.quantidade
 
-            produto.nome = nome
-            produto.preco = float(preco)
-            produto.quantidade = int(quantidade)
+            produto_atualizado = estoque.atualizar_produto(
+                sku,
+                nome,
+                float(preco),
+                int(quantidade)
+            )
 
-            print("Produto atualizado com sucesso!")
+            if produto_atualizado:
+                print("Produto atualizado com sucesso!")
+            else:
+                print("Não foi possível atualizar o produto.")
 
         else:
             print("Produto não encontrado.")
