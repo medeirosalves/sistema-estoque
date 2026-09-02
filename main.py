@@ -2,7 +2,6 @@ from models.produto import Produto
 from services.estoque_service import Estoque
 
 from database.connection import engine
-
 print(engine)
 
 print("=" * 50)
